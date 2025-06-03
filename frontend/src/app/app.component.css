@@ -1,0 +1,65 @@
+/* Fondo general */
+.welcome-container {
+  background-color: #EFF2F6; /* Anti-flash white */
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Imagen logo */
+.logo-image {
+  display: block;
+  margin: 0 auto 30px auto;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(82, 152, 153, 0.3); /* sombra con color Dark cyan */
+}
+
+/* Título */
+.welcome-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #529899; /* Dark cyan */
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupo de botones */
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+/* Botones */
+.btn {
+  background-color: #01A4B1; /* Moonstone */
+  color: #EFF2F6; /* Anti-flash white */
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(1, 164, 177, 0.4);
+  font-family: 'Georgia', serif;
+}
+
+.btn:hover {
+  background-color: #529899; /* Dark cyan */
+  box-shadow: 0 6px 14px rgba(82, 152, 153, 0.7);
+  color: #D6E4EA; /* Alice Blue */
+  transform: translateY(-2px);
+}
+
+/* Opcional: botón foco accesible */
+.btn:focus {
+  outline: 3px solid #A8B4B9; /* Cadet gray */
+  outline-offset: 2px;
+}
