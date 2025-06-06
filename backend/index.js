@@ -1,36 +1,14 @@
 const express = require('express');
-const { Pool } = require('pg');
-const cors = require('cors');
-
 const app = express();
-app.use(cors());
+
+// Middleware para aceptar JSON
 app.use(express.json());
 
-// Configura la conexión a PostgreSQL
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'login_app_db',
-  password: 'cbd4Hbxn',
-  port: 5432, // puerto estándar de postgres
+app.get('/', (req, res) => {
+  res.send('¡Servidor backend funcionando correctamente!');
 });
 
-// Endpoint para obtener datos
-app.get('/api/data', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM tu_tabla');
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Error en la consulta a la base de datos' });
-  }
-});
-
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Backend corriendo en http://localhost:${PORT}`);
-});
-
-app.get('/', (req, res) => {
-  res.send('Servidor backend funcionando 👍');
 });

@@ -1,13 +1,17 @@
-<div class="welcome-container">
-  <img src="https://sudamericano.edu.ec/wp-content/uploads/elementor/thumbs/cropped-Tecnologico-Sudamericano-ACTUALIZADO-1-1-r1av5gp4ehcdl4ae9pdf19ynrb4y3kh7wi63d8ez1y.png" alt="Logo Tecnológico Sudamericano" />
+<div class="login-container">
+  <img src="https://static.whataform.com/avatar/avatar_5b1da1aa47561fd_d29dd6c85bbf3a80347a456e771b7d914a8150a6.png" alt="Logo ITS" class="logo" />
 
-  <h1 class="welcome-title">Bienvenidos al sistema de gestión de fichas de gastronomía</h1>
+  <h2 class="subtitle">Bienvenidos al sistema de fichas gastronómicas</h2>
 
-  <div class="button-group">
-    <button class="btn" (click)="iniciarDocente()">Acceso docentes</button>
-    <button class="btn" (click)="iniciarEstudiante()">Acceso estudiantes</button>
-  </div>
+  <form class="login-form">
+    <input type="text" placeholder="Usuario" name="usuario" required>
+    <input type="password" placeholder="Contraseña" name="contrasena" required>
+    
+    <button type="button" (click)="ingresar()">Acceder</button>
+
+    <div class="extra-links">
+      <a href="#">¿Olvidó su contraseña?</a>
+      <a href="#">Entrar como persona invitada</a>
+    </div>
+  </form>
 </div>
-
-<router-outlet></router-outlet>
-
