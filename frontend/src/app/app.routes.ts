@@ -1,13 +1,8 @@
 import { Routes } from '@angular/router';
+import { FichasComponent } from './pages/fichas/fichas.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    loadComponent: () => import('./app.component').then(m => m.AppComponent)
-  },
-  {
-    path: 'fichas',
-    loadComponent: () =>
-      import('./pages/fichas/fichas.component').then(m => m.FichasComponent)
-  }
+  { path: 'fichas', component: FichasComponent },
+  { path: '', redirectTo: 'fichas', pathMatch: 'full' } // opcional
 ];
+  
