@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
+   "postbuild": "cpy 'dist/frontend/browser/**' dist/frontend --recursive",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production",
