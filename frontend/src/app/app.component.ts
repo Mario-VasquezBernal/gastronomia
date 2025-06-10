@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  mensajePersonalizado = '¡Bienvenido a Gastronomía Q74O!';
   constructor(private router: Router) {}
 
   ingresar() {

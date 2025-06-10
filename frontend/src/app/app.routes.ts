@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { FichasComponent } from './pages/fichas/fichas.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: '/fichas', pathMatch: 'full' },  // redirige raíz a /fichas
   { path: 'fichas', component: FichasComponent },
-  { path: '', redirectTo: 'fichas', pathMatch: 'full' } // opcional
+  // otras rutas aquí...
 ];
-  
