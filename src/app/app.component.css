@@ -1,67 +1,90 @@
-body {
+body, html {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fdfdfd;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
 }
 
 .login-container {
-  text-align: center;
-  padding: 40px;
-  margin-top: 60px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .logo {
-  width: 180px;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 18px;
-  color: #006d77; /* Verde-azulado */
+  max-width: 180px;
   margin-bottom: 30px;
 }
 
-.login-form input {
-  display: block;
+.login-form {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 10px;
-  margin: 10px auto;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  font-size: 14px;
-  box-sizing: border-box;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #007b9e;
+  outline: none;
 }
 
 .login-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #006d77;
-  color: white;
+  background-color: #007b9e;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  font-size: 15px;
+  padding: 12px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 .login-form button:hover {
-  background-color: #005661;
+  background-color: #005d75;
 }
 
-.extra-links {
-  margin-top: 15px;
-}
-
-.extra-links a {
-  display: block;
-  color: #006d77;
+.login-form a {
+  text-align: center;
+  font-size: 14px;
+  color: #0056b3;
   text-decoration: none;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.guest-link {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
   font-size: 13px;
-  margin-top: 5px;
+  color: #666;
+}
+
+.footer a {
+  color: #007b9e;
+  text-decoration: none;
+  margin-left: 10px;
 }

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  imports: []
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   constructor(private router: Router) {}
